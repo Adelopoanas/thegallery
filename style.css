@@ -5,6 +5,26 @@
 body{
     font-family: 'Langar', cursive;
 }
+.form1{
+    background-color: rgb(138, 11, 241);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    min-height: 100%;
+    margin: 0;
+}
+.container1{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0,0,0.3);
+    position: relative;
+    top: 4px;
+}
 
 #container{
     display: grid;
@@ -34,6 +54,13 @@ body{
     transition: color 0.5s;
     text-transform: uppercase;
 }
+#right-wrapper #account{
+    color:white;
+    background-color: teal;
+    border: 1px solid teal;
+    border-radius: 20px;
+    padding: 5px;
+}
 #right-wrapper:hover{
     transition: border-bottom 0.5s;
 }
@@ -47,7 +74,10 @@ body{
 .active{
     color:blue !important;
     border-bottom: 1px solid black;
-
+}
+.active1{
+    background-color:rgb(138, 11, 241);
+    color: white;
 }
 #content-wrapper{
     position: relative;
@@ -61,6 +91,26 @@ body{
     z-index: 0;
 }
 #content-wrapper::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.content-wrapper{
+    position: relative;
+    padding: 50px;
+    height: 500px;
+    background-image: url('121.jpeg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+.content-wrapper::before{
     content: "";
     position: absolute;
     top: 0;
@@ -164,6 +214,73 @@ body{
     opacity: 0.75;
 }
 
+.header{
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px 40px;
+}
+.header h2{
+    margin: 0;
+}
+.form{
+    padding: 20px 40px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+.form-control img{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.form-control button{
+    color: white;
+    background-color: rgb(138, 11, 241);
+    border: 2px solid rgb(138, 11, 241);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+.form-control.success input{
+    border: 2px solid #50E350;
+}
+.form-control.wrong input{
+    border: 2px solid #E35050;
+}
+.form-control.success img.success{
+    visibility: visible;
+}
+.form-control.wrong img.wrong{
+    visibility: visible;
+}
+img.wrong{
+    height: 20px;
+}
 
 
 
@@ -174,4 +291,46 @@ body{
     background-color: blue;
     color: white;
     text-align: center;
+}
+
+
+
+@media(max-width:400px){
+    .content-wrapper{
+        position: relative;
+        padding: 50px;
+        height: 200px;
+        background-image: url('121.jpeg');
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+    .content-wrapper::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    .top-header{
+        font-size: 30px;
+        font-weight: 400;
+        margin-right: 20px; 
+    }
+}   
+@media(max-width:400px){
+    .container1{
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        overflow: hidden;
+        width: 400px;
+        max-width: 100%;
+        box-shadow: 0 2px 5px rgba(0, 0,0,0.3);
+        position: relative;
+    }
 }
