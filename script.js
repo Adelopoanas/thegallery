@@ -30,5 +30,9 @@ function setErrorFor(input,message) {
 
     small.innerHTML = message;
 
-    formControl.className = 'form-control error'
+    formControl.className = 'form-control incorrect';
+}
+function setSuccessFor(input){
+    const formControl = input.parentElement;
+    formControl.className = 'form-control correct'
 }
